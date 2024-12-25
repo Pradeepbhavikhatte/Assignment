@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Text in Circular Order</title>
+    <style>
+        .text-container {
+            width: 100%;
+            height: 50px;
+            overflow: hidden; 
+            position: relative;
+        }
+
+        .sliding-text {
+            position: absolute;
+            white-space: nowrap;
+            font-size: 24px;
+            font-weight: bold;
+            animation: slide 10s linear infinite;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(100%);
+            }
+            50% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%); 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="text-container">
+        <div class="sliding-text">This is the text sliding in circular order!</div>
+    </div>
+</body>
+</html>
